@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  sam-aws-layer
+
+   SAM Template for an AWS Layer
+
+Resources:
+  AWSLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      Description: AWS Dependencies for serverlass app
+      ContentUri: "./dist/"
+      CompatibleRuntimes:
+        - nodejs14.x
+      LicenseInfo: "MIT"
+      RetentionPolicy: Delete
+
+Outputs:
+  AWSLayerArn:
+    Description: "AWS Dependencies Layer"
+    Value: !Ref AWSLayer
