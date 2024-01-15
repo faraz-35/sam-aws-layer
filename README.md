@@ -20,19 +20,24 @@ This repository provides a starting point for creating your own custom AWS layer
 
 To get started with this repository, follow these steps:
 
-1. Clone the repository to your local machine.
-2. Install the necessary dependencies (if any).
-3. Customize the layer code and configuration files to suit your needs.
+1. Clone the repository to your local machine using `git clone https://github.com/faraz-35/sam-aws-layer.git`.
+2. Install the necessary dependencies using `npm i`
+3. create a '.env' file and add ENV = LOCAL (for local testing)
+4. Initialize DynamoDB container using `npm run dynamodb-local-setup` (for local testing)
 
 ## Usage
 
 To use the custom AWS layer in your SAM applications, follow these steps:
 
-1. Package your SAM application using the AWS SAM CLI.
-2. Include the custom layer ARN in the `template.yaml` file of your SAM application.
-3. Deploy your SAM application using the AWS SAM CLI.
+1. Build & Deploy to AWS using `npm run deploy`
 
 For detailed instructions on how to use AWS Lambda layers with SAM applications, refer to the official AWS documentation.
+
+## Testing
+
+To run the tests for the application, follow these steps:
+
+1. Setup local dynamoDB container and run the tests: `npm run test`
 
 ## Contributing
 
